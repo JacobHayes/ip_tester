@@ -3,7 +3,7 @@ ip_addr=0
 printf "What is the IP range? (ex: 192.168.0.x): "
 read ip_range
 
-while (( ip_addr < 254 ))
+while (( ip_addr <= 255 ))
 do
   ping -c 1 -t 1 ${ip_range}${ip_addr} > /dev/null
 
